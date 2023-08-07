@@ -1,0 +1,176 @@
+/* margin, border, padding */
+
+:root {
+    --astrocolor:rgb(0,2,17);
+    --steamcolor:rgb(27,40,56);
+}
+
+@font-face {
+  font-family: constan;
+  src: url(constan.ttf);
+}
+
+.topmenu{ padding: 5px; text-align: center; top: 13px;
+font-family:"constan","luminari","Garamond","Times New Roman";
+font-size: 20px;
+background-color: var(--astrocolor); color:rgb( 240,240,235)
+}
+
+a.topmenulink:link{text-decoration: none; color:rgb( 240,240,235); font-weight: normal; margin: 10px; }
+a.topmenulink:visited{text-decoration: none; color:rgb( 240,240,235); font-weight: normal; border: 10px; }
+a.topmenulink:hover{text-decoration: none; color:rgb( 255, 170, 0); font-weight: normal;}
+a.topmenulink:active{text-decoration: none; color:rgb( 205, 125, 0); font-weight: normal;}
+			  
+
+/*###########################################################################*/
+
+a:link {text-decoration: none; color:rgb(0,255,0);}
+a:visited {text-decoration: none; color:rgb(0,255,0);}
+a:hover {text-decoration: none; color:rgb(0,255,0); font-weight:bold;}
+a:active {text-decoration: none; color:rgb(0,255,0);}
+
+body
+{
+	/* background-image: url(web_astro.jpg), linear-gradient(to right, gray,white,white,gray); */
+	background-color: var(--astrocolor);
+	background-image: url("web_astro.jpg");
+    background-position: 50% 0%;
+    /* background-repeat: no-repeat; */
+    /* background-attachment: fixed; */
+}
+
+img.arrow {filter: saturate(0);}
+img.arrow:hover {filter: saturate(1.5);}
+
+img.card {
+border: 1px ridge rgb( 0,0,0);
+border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+
+/* .buffer { */
+	/* margin:100px; */
+/* } */
+
+.center {
+text-align: center;
+}
+
+.centerflex {
+display: flex;
+justify-content: center;
+}
+
+.centerCr {
+display: flex;
+justify-content: center;
+}
+
+p.first
+{
+text-indent: 0.5in;
+}
+
+p
+{
+margin:0px; 
+}
+
+.pressfont {margin:0px; margin-top:20px; font-family:"Helvetica","Times New Roman"; font-size:20px; text-shadow:0 0 8px rgba(255,255,255,0.5); color:rgb(255,255,255);}
+.pressfont2 {margin:4px; font-family:"Helvetica","Times New Roman"; font-size:14px; text-shadow:0 0 8px rgba(255,255,255,0.5); color:rgb(255,255,255);}
+.pressfont3 {text-align:center; width:700px; margin:4px; font-family:"Helvetica","Times New Roman"; font-size:14px; text-shadow:0 0 8px rgba(255,255,255,0.5); color:rgb(255,255,255);}
+
+h1
+{
+font-family:"constan","luminari","Garamond","Times New Roman";
+font-size: 20px;
+text-shadow: 0 0 40px rgba(255,255,255,0.5), 0 0 8px rgba(255,255,0,0.5);
+color:rgb( 255,255,255);
+}
+h2
+{
+font-family:"constan","luminari","Garamond","Times New Roman";
+font-size: 20px;
+text-shadow: 0 0 40px rgba(0,0,0,0.5), 0 0 8px rgba(0,0,0,0.5);
+color:rgb( 0,0,0);
+}
+h3
+{
+	color: black;
+	font-family: 'times new roman';
+	font-weight: bold;
+	font-size: 12pt;
+}
+h4
+{
+	color: #000000;
+	font-family: "sansserif";
+	font-weight: bold;
+	font-size: 10pt;	
+}
+h5
+{ 
+	color: #000000;
+	font-family: "sansserif";
+	font-weight: bold;
+	font-size: 8pt;	
+}
+h6
+{
+	color: #000000;
+	font-family: "sansserif";
+	font-weight: bold;
+	font-size: 6pt;	
+}
+
+ol ol ol li
+{
+    list-style: lower-alpha
+}
+ol ol li
+{
+    font-weight: normal;
+    list-style: decimal;
+    padding-top: 0px
+}
+ol li
+{
+    font-weight: bold;
+    list-style: upper-roman;
+    padding-top: 1em
+}
+
+ul ul ul li { list-style: circle;}
+ul ul li { list-style: square;}
+ul li { list-style: disc; }
+.pressli {text-align:left; margin:4px; font-family:"Helvetica","Times New Roman"; font-size:14px; text-shadow:0 0 8px rgba(255,255,255,0.5); color:rgb(255,255,255);}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  /* border-bottom: 1px dotted black; */
+  margin:0;
+  border:0;
+  padding:0;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(0,25,255);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 50%;
+  margin-left: -60px;
+  margin-top: 36px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}

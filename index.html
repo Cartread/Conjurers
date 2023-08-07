@@ -1,39 +1,224 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
- "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-<!--=====================================================head=====================================================-->
-<head>
+<head>	<!--=====================================================head=====================================================-->
 
-	<title>FreeLice</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="author" content="Carl D. Treadway" />
-	<meta name="description" content="Free Lice" /> 
-	<meta name="keywords" content="free lice" />
-	<link rel="stylesheet" href="mystyle.css" type="text/css" />
+	<title>Conjurers</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="author" content="Carl D. Treadway">
+	<meta name="description" content="Conjurers computer game"> 
+	<meta name="keywords" content="About">
+	<link rel="stylesheet" href="mystyle.css" type="text/css">
+	
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+video {
+  max-width: 100%;
+  height: auto;
+}
+</style>
 
-</head>
-<!--====================================================/head=====================================================-->
+<script>
+// Get the root element
+var r = document.querySelector(':root');
+var number = 1;
+// Create a function for getting a variable value
+function myFunction(n) {
+number=number+n;
+if (number>8){number=1;} else if (number<1){number=8;}
+document.getElementById("wiz").src = 'wiz/0'+number+'.png';
+document.getElementById("Cr1").src = "gif/unit"+(number*4-4+1)+".gif";
+document.getElementById("Cr2").src = "gif/unit"+(number*4-4+2)+".gif";
+document.getElementById("Cr3").src = "gif/unit"+(number*4-4+3)+".gif";
+document.getElementById("Cr4").src = "gif/unit"+(number*4-4+4)+".gif";
 
-<!--=====================================================body=====================================================-->
-<body onmouseover="window.status=' ';return true;">
+const creatures=["Goblin","Elf","Footman","Dwarf","Panther","Direwolf","Lion","Bruin","Wildboar","Stag","Stallion","Aurochs",
+"Chiropter","Pteranodon","Eagle","Wyvern","Dimetrodon","Saurian","Drake","Crocodile","Viper","Eel","Serpent","Python",
+"Arachne","Myrmex","Scorpion","Carcinus","?","?","?","?"];
+document.getElementById("Cr1T").innerHTML = creatures[number*4-4+1-1];
+document.getElementById("Cr2T").innerHTML = creatures[number*4-4+2-1];
+document.getElementById("Cr3T").innerHTML = creatures[number*4-4+3-1];
+document.getElementById("Cr4T").innerHTML = creatures[number*4-4+4-1];
+}
+</script>
+<!-- <script src="cookies.js" type="text/javascript"></script>	 -->
+
+</head>	<!--====================================================/head=====================================================-->
+
+<body>	<!--=====================================================body=====================================================-->
+
+<!-- <div class="centerflex"> -->
+<!-- <img alt="bg" src="web_back.png" width="2000" height="500" style="max-width: 100%; position: absolute; z-index:-1; margin-top:1290px"> -->
+<!-- </div> -->
 
 <div class="topmenu">
-<span class="topnow"><a class="topmenulink" style="color:#ffffcc" href="index.html">HOME</a></span>
-<span class="topthen"><a class="topmenulink" href="feedback.html">FEEDBACK</a></span>
-<span class="topthen"><a class="topmenulink" href="press.html">PRESS</a></span>
-<span class="topthen"><a class="topmenulink" href="about.html">ABOUT</a></span>
+<a class="topmenulink" href="index.html" style="color:rgb(255,255,255)">About</a>
+<!-- <a class="topmenulink" href="feedback.html">Dev</a> -->
+<a class="topmenulink" href="presskit.html">Press kit</a>
 </div>
 
-<p>Final Project : <a href="assign4/index.html">FreeLice</a> - 
-<a href="assign4/storyboard.jpg">storyboard</a></p>
-<p>Assignment 3: <a href="assign3/index.html">Framed Form</a></p>
-<p>Assignment 2: <a href="assign2/index.html">Tables, Images and JavaScript</a> - 
-<a href="assign2/storyboard.jpg">storyboard</a></p>
-<p>Assignment 1: <a href="assign1/index.html">making the world better</a></p>
-<p>Assignment 0: <a href="assign0/index.html">submitting practice</a></p>
+<div class="centerflex">
+<img alt="Title" src="title_conjurers.png" style="margin:100px;">
+</div>
 
-</body>
-<!--====================================================/body=====================================================-->
+<div class="centerflex">
+<iframe width="700" height="400" src="https://www.youtube.com/embed/uzLq2v7_yuA" allowfullscreen="" style="  border: 2px ridge rgb( 255,170,0);
+  border-radius: 12px; box-shadow: 0 0 40px rgba(255,255,255,0.5), 0 0 8px rgba(255,255,0,0.5);"> </iframe>
+</div>
+
+<div class="center">
+<img alt="Introduction" src="introduction.png" style="margin-top:90px; transform: translate(0px,20px);">
+<h1 style="transform: translate(0px,20px);">Choose your Conjurer and unite the Zodiac.</h1>
+</div>
+
+<div class="center">
+<img class="arrow" alt="arrow" src="arrowl2.png" onclick="myFunction(-1);" style="transform: translate(0px,-80px);">
+
+<img id="wiz" alt="Andros" src="wiz/01.png" style="transform: translate(0px,40px);">
+
+<img class="arrow" alt="arrow" src="arrowr2.png" onclick="myFunction(1);" style="transform: translate(0px,-80px);">
+</div>
+
+<div class="center">
+	<div class="tooltip">
+		<img id="Cr1" alt="Cr" src="gif/unit1.gif">
+		<span id="Cr1T" class="tooltiptext">Goblin</span>
+	</div>
+	<div class="tooltip">
+		<img id="Cr2" alt="Cr" src="gif/unit2.gif">
+		<span id="Cr2T" class="tooltiptext">Elf</span>
+	</div>
+	<div class="tooltip">
+		<img id="Cr3" alt="Cr" src="gif/unit3.gif">
+		<span id="Cr3T" class="tooltiptext">Footman</span>
+	</div>
+	<div class="tooltip">
+		<img id="Cr4" alt="Cr" src="gif/unit4.gif">
+		<span id="Cr4T" class="tooltiptext">Dwarf</span>
+	</div>
+</div>
+
+<div class="center">
+<img alt="Zodiac" src="zodiac.png" style="margin-top:40px">
+<h1>Start with four Creatures and expand through victories.</h1>
+<h1>Any two Creatures can be combined into a powerful Hybrid.</h1>
+</div>
+
+<div class="centerCr">
+	<div class="tooltip">
+		<img  alt="Cr" src="gif/unit3.gif" style="transform: scaleX(-1);">
+		<span  class="tooltiptext">Footman</span>
+	</div>
+	<h1 style="margin-top:120px;margin-left:10px;margin-right:10px;">+</h1>
+	<div class="tooltip">
+		<img  alt="Cr" src="gif/unit12.gif" style="transform: scaleX(-1); ">
+		<span  class="tooltiptext">Aurochs</span>
+	</div>
+	<h1 style="margin-top:120px;margin-left:10px;margin-right:10px;">=</h1>
+	<div class="tooltip">
+		<img  alt="Cr" src="gif/minotaur.gif" style="transform: scaleX(-1);">
+		<span  class="tooltiptext">Minotaur</span>
+	</div>
+</div>
+<div class="centerCr">
+	<div class="tooltip">
+		<img  alt="Cr" src="gif/unit7.gif" style="transform: scaleX(-1);">
+		<span  class="tooltiptext">Lion</span>
+	</div>
+	<h1 style="margin-top:120px;margin-left:10px;margin-right:10px;">+</h1>
+	<div class="tooltip">
+		<img  alt="Cr" src="gif/unit27.gif" style="transform: scaleX(-1); ">
+		<span  class="tooltiptext">Scorpion</span>
+	</div>
+	<h1 style="margin-top:120px;margin-left:10px;margin-right:10px;">=</h1>
+	<div class="tooltip">
+		<img  alt="Cr" src="gif/manticore.gif" style="transform: scaleX(-1);">
+		<span  class="tooltiptext">Manticore</span>
+	</div>
+</div>
+<div class="centerCr">
+	<div class="tooltip">
+		<img  alt="Cr" src="gif/unit19.gif" style="transform: scaleX(-1); ">
+		<span  class="tooltiptext">Drake</span>
+	</div>
+	<h1 style="margin-top:90px;margin-left:10px;margin-right:10px;">+</h1>
+	<div class="tooltip">
+		<img  alt="Cr" src="gif/unit14.gif" style="transform: scaleX(-1);">
+		<span  class="tooltiptext">Pteranodon</span>
+	</div>
+	<h1 style="margin-top:90px;margin-left:10px;margin-right:10px;">=</h1>
+	<div class="tooltip">
+		<img  alt="Cr" src="gif/dragon.gif" style="transform: scaleX(-1);">
+		<span  class="tooltiptext">Dragon</span>
+	</div>
+</div>
+
+<div class="center">
+<img alt="Cards" src="cards.png" style="margin-top:40px">
+<h1>Create a Deck of 24 Cards to support your Creatures with Weapons, Abilities and Spells.</h1>
+</div>
+
+<div class="center">
+<img class="card" alt="Card" src="cards/Cr1.png" style="margin:0px">
+<img class="card" alt="Card" src="cards/Cr2.png" style="margin:0px">
+<img class="card" alt="Card" src="cards/Cr3.png" style="margin:0px">
+</div>
+<div class="center">
+<img class="card" alt="Card" src="cards/We.png" style="margin:0px">
+<img class="card" alt="Card" src="cards/Ab.png" style="margin:0px">
+<img class="card" alt="Card" src="cards/Sp.png" style="margin:0px">
+</div>
+
+<div class="center">
+<img alt="Battles" src="battles.png" style="margin-top:40px">
+<h1>Cards and Creatures require Mana, which is gained through Mana Towers.</h1>
+<h1>Traverse your Creature's favorable Terrain and expand your Domain.</h1>
+</div>
+
+<div class="center">
+<video width="1024" autoplay muted loop>
+  <source src="battles1.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+</div>
+
+<div class="center">
+<img alt="Finale" src="finale.png" style="margin-top:40px">
+<h1>Defeat the Conjurers, unite the Zodiac and unveil the Red Vortex.</h1>
+</div>
+
+<div class="center">
+<video width="1024" autoplay muted loop>
+  <source src="finale1.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+</div>
+
+<div class="center">
+<h1 class="pressfont"><u>Gameplay Details</u></h1>
+</div>
+<div class="centerflex">
+<h1 class="pressfont3">
+Single-player campaign mode: first choose a Conjurer, starter Deck and Domain.<br>
+Then select a neighboring Domain to battle along with a few Creatures to start.<br>
+Picking Creatures whose movement type is advantageous on the current battlefield is sound strategy.<br>
+<br>
+Each player starts with three Cards drawn from their custom Deck and draws another each turn.<br>
+Cards add a layer of strategy which makes this game unique: they may be more Creatures, Weapons or Abilities to strengthen allies, 
+or Spells which can affect allies or enemies.<br>
+<br>
+Creatures cost Mana to "activate" each turn, same as Cards, so players must choose carefully how they spend their Mana.
+When Creatures "activate," they add their surroundings to your Domain and may acquire Mana Towers or other useful objects.
+Then you may move and attack with that Creature.<br>
+<br>
+Each player has their own Tower, safely in the back of their Domain.
+Destroying your opponent's Tower is how you achieve victory.
+After winning a battle, you may collect any Creature on the field for future battles, spend EXP on new Cards and Creatures and expand your campaign Domain.
+<br><br>
+Once your Domain encircles the map, uniting the Zodiac, you proceed to the final battle.
+</h1>
+</div>
+
+</body>	<!--====================================================/body=====================================================-->
 
 </html>
