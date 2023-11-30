@@ -78,6 +78,7 @@ margin:0px;
 .pressfont {margin:0px; margin-top:20px; font-family:"Helvetica","Times New Roman"; font-size:20px; text-shadow:0 0 8px rgba(255,255,255,0.5); color:rgb(255,255,255);}
 .pressfont2 {margin:4px; font-family:"Helvetica","Times New Roman"; font-size:14px; text-shadow:0 0 8px rgba(255,255,255,0.5); color:rgb(255,255,255);}
 .pressfont3 {text-align:center; width:700px; margin:4px; font-family:"Helvetica","Times New Roman"; font-size:14px; text-shadow:0 0 8px rgba(255,255,255,0.5); color:rgb(255,255,255);}
+.footer {text-align:center; width:9999px; margin:4px; font-family:"constan"; font-size:10px; text-shadow:0 0 8px rgba(255,255,255,0.5); color:rgb(255,255,255);}
 
 h1
 {
