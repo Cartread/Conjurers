@@ -11,6 +11,7 @@
 }
 
 .topmenu{ padding: 5px; text-align: center; top: 13px;
+/* .topmenu{ margin: auto; width: 50%; padding: 5px; top: 13px; */
 font-family:"constan","luminari","Garamond","Times New Roman";
 font-size: 20px;
 background-color: var(--astrocolor); color:rgb( 240,240,235)
@@ -45,8 +46,11 @@ img.arrow:hover {filter: saturate(1.5);}
 img.card {
 border: 1px ridge rgb( 0,0,0);
 border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.5);
+width:200px;
 }
-
+.scale-down {
+  object-fit: scale-down;
+}
 /* .buffer { */
 	/* margin:100px; */
 /* } */
@@ -54,34 +58,47 @@ border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.5);
 .center {
 text-align: center;
 }
+/* .center > div {max-width:100%;} */
+.center img {max-width:100%;}
 
 .centerflex {
 display: flex;
 justify-content: center;
+flex-wrap: nowrap;
 }
+/* .centerflex > div {max-width:100%;} */
+.centerflex img {max-width:100%;}
 
-.centerCr {
+.centerflexg {
 display: flex;
 justify-content: center;
+width:100%;
+flex-wrap: wrap;
+overflow-x:hidden;
+/* float: left; */
+}
+.centerflexg img {
+max-width:100%;
+margin:10px;
 }
 
-p.first
-{
+
+p.first{
 text-indent: 0.5in;
 }
 
-p
-{
+p{
 margin:0px; 
 }
 
-.pressfont {margin:0px; margin-top:20px; font-family:"Helvetica","Times New Roman"; font-size:20px; text-shadow:0 0 8px rgba(255,255,255,0.5); color:rgb(255,255,255);}
+.pressfont {font-weight:bold;margin:0px; margin-top:20px; font-family:"Helvetica","Times New Roman"; font-size:20px; text-shadow:0 0 8px rgba(255,255,255,0.5); color:rgb(255,255,255);}
 .pressfont2 {margin:4px; font-family:"Helvetica","Times New Roman"; font-size:14px; text-shadow:0 0 8px rgba(255,255,255,0.5); color:rgb(255,255,255);}
 .pressfont3 {text-align:center; width:700px; margin:4px; font-family:"Helvetica","Times New Roman"; font-size:14px; text-shadow:0 0 8px rgba(255,255,255,0.5); color:rgb(255,255,255);}
 .footer {text-align:center; width:9999px; margin:4px; font-family:"constan"; font-size:10px; text-shadow:0 0 8px rgba(255,255,255,0.5); color:rgb(255,255,255);}
 
 h1
 {
+	font-weight: normal;
 font-family:"constan","luminari","Garamond","Times New Roman";
 font-size: 20px;
 text-shadow: 0 0 40px rgba(255,255,255,0.5), 0 0 8px rgba(255,255,0,0.5);
@@ -123,6 +140,10 @@ h6
 	font-size: 6pt;	
 }
 
+ul, ol{
+	padding-left: 30px;	
+}
+
 ol ol ol li
 {
     list-style: lower-alpha
@@ -143,7 +164,6 @@ ol li
 ul ul ul li { list-style: circle;}
 ul ul li { list-style: square;}
 ul li { list-style: disc; }
-.pressli {text-align:left; margin:4px; font-family:"Helvetica","Times New Roman"; font-size:14px; text-shadow:0 0 8px rgba(255,255,255,0.5); color:rgb(255,255,255);}
 
 .tooltip {
   position: relative;
