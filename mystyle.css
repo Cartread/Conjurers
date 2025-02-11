@@ -10,11 +10,12 @@
   src: url(constan.ttf);
 }
 
-.topmenu{ padding: 5px; text-align: center; top: 13px;
+.topmenu{ padding: 5px; text-align: center; top: 0px; z-index: 9;
 /* .topmenu{ margin: auto; width: 50%; padding: 5px; top: 13px; */
 font-family:"constan","luminari","Garamond","Times New Roman";
 font-size: 20px;
-background-color: var(--astrocolor); color:rgb( 240,240,235)
+background-color: var(--astrocolor); color:rgb( 240,240,235);
+  position: sticky;
 }
 
 a.topmenulink:link{text-decoration: none; color:rgb( 240,240,235); font-weight: normal; margin: 10px; }
